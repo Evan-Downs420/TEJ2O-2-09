@@ -13,6 +13,12 @@ let score: number = 0
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
+//shake
+input.onGesture(Gesture.Shake, function() {
+
+  randomNumber= randint(0,2)
+  basic.clearScreen()
+
 // if rock
  if (randomNumber == 0) {
   basic.showIcon(IconNames.SmallSquare)
@@ -28,6 +34,7 @@ if (randomNumber == 2) {
 
 basic.pause(5000)
 basic.clearScreen()
+})
 
 //button a
 input.onButtonPressed(Button.A, function() {
